@@ -413,7 +413,7 @@
   display: flex;
   gap: 15px;
   align-items: flex-start;
-  flex-wrap: wrap; /* penting supaya tidak kepotong */
+  flex-wrap: nowrap;
 }
 
 /* Foto */
@@ -463,7 +463,7 @@
   font-size: 0.85rem;
   font-weight: 500;
   text-transform: uppercase;
-  word-break: break-word; /* supaya teks panjang tidak keluar */
+  overflow-wrap: break-word;
 }
 
 /* FORM */
@@ -490,7 +490,10 @@
 }
 
 /* RESPONSIVE HP */
-@media (max-width: 600px) {
+.preview-row {
+  display: flex;
+  flex-direction: row;
+}
 
   #biodataPreviewCard {
     margin: 20px 10px;
